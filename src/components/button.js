@@ -11,10 +11,11 @@ const ScButton = styled.button`
   color: white;
 `
 
-function Button() {
+function Button({ children, text}) {
   return (
     <ScButton>
-      {'Button'}
+      {text}
+      {children}
     </ScButton>
   );
 }

@@ -3,6 +3,7 @@ import logo from './assets/logo.svg';
 import sampleGif from './assets/loading.gif';
 import Button from '../../components/button';
 import styled, { keyframes } from 'styled-components';
+import ExampleButton from './components/example-button';
 
 const AppLogoSpin = keyframes`
   from {
@@ -45,7 +46,19 @@ function Example() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <Button text={'Button Text'} />
+
+        <Button text={'Functional Component'} />
+
+        <ExampleButton>{'React.Component Button'}</ExampleButton>
+
+        { React.createElement(
+          Button,
+          { text: 'Another way of rendering' },
+          (
+            <h1>{'hi'}</h1>
+          )
+        ) }
+
         <ScAppLink
           href="https://reactjs.org"
           target="_blank"
