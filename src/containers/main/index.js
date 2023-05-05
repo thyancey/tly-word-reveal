@@ -1,10 +1,10 @@
 import React from 'react';
-import Example from '../example';
+import WordBox from './wordbox';
 
 function Main() {
   return (
     <div>
-      <Example />
+      <WordBox />
     </div>
   );
 }
